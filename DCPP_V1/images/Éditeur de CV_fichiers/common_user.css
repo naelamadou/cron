@@ -1,0 +1,91 @@
+
+.btn {
+    padding: 10px;
+    display: block;
+    float: left;
+    cursor: pointer;
+
+    -webkit-transition: linear 0.2s;
+    -moz-transition: linear 0.2s;
+    -ms-transition: linear 0.2s;
+    -o-transition: linear 0.2s;
+    transition: linear 0.2s;
+}
+
+.btn-blue {
+    background: #1ea9dd;
+    color: #fff;
+}
+
+.btn-blue.btn-hoverable:hover {
+    background: #1694c3;
+    color: #fff;
+}
+
+.btn-pink {
+    background: #e85296;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.btn-pink:hover {
+    border: #e85296 1px solid;
+    background: #fff;
+    color: #e85296;
+}
+
+.btn-pink.btn-reverse {
+    border: 1px solid transparent;
+    background: #fff;
+    color: #e85296;
+}
+
+.btn-pink.btn-reverse:hover {
+    border: #e85296 1px solid;
+    background: #e85296;
+    color: #fff;
+}
+
+.btn-dark-blue {
+    background: #333f48;
+    color: #fff;
+}
+
+.btn.btn-small {
+    padding: 6px 8px;
+}
+
+.btn-gilroy {
+    font-size: 10px;
+    font-family: 'gilroyextrabold';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    padding: 10px 15px;
+}
+
+.btn > span {
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.btn .text {
+    max-width: 0;
+    overflow: hidden;
+    display: inline-block;
+    -webkit-transition: linear 0.2s;
+    -moz-transition: linear 0.2s;
+    -ms-transition: linear 0.2s;
+    -o-transition: linear 0.2s;
+    transition: linear 0.2s;
+
+    font-family: 'gilroyextrabold';
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-hovered .text,
+.btn:hover .text {
+    max-width: 200px;
+}

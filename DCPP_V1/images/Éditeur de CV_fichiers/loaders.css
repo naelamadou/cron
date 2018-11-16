@@ -1,0 +1,143 @@
+/* LOGO ANIMATION */
+#cv-logo {
+    stroke-width: 5px;
+    stroke-dasharray: 2300;
+    stroke-dashoffset: 0;
+    -webkit-animation: dash-one 1s cubic-bezier(1, 1, .5, .5) alternate infinite;
+    -moz-animation: dash-one 1s cubic-bezier(1, 1, .5, .5) alternate infinite;
+    -o-animation: dash-one 1s cubic-bezier(1, 1, .5, .5) alternate infinite;
+    animation: dash-one 1s cubic-bezier(1, 1, .5, .5) alternate infinite;
+}
+
+@keyframes dash-one {
+    0% {
+        stroke-dashoffset: 2550;
+        stroke: url(#gradient);
+    }
+    100% {
+        fill: transparent;
+        stroke: url(#gradient);
+    }
+}
+
+/* STRIPE PAYMENT ANIMATION */
+
+#strokeLarge {
+    width: 400px;
+    stroke-width: 3px;
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 0;
+    -webkit-animation: card_outline 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -moz-animation: card_outline 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -o-animation: card_outline 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    animation: card_outline 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+}
+
+@keyframes card_outline {
+    from {
+        stroke-dashoffset: -1200;
+    }
+    /* use 2500 for double effect */
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.rect {
+    stroke-width: 3px;
+    stroke-dasharray: 550;
+    stroke-dashoffset: 0;
+    -webkit-animation: card_rect_small 1.5s cubic-bezier(1, .75, 1, 1) .5s alternate both infinite;
+    -moz-animation: card_rect_small 1.5s cubic-bezier(1, .75, 1, 1) .5s alternate both alternate infinite;
+    -o-animation: card_rect_small 1.5s cubic-bezier(1, .75, 1, 1) .5s alternate both infinite;
+    animation: card_rect_small 1.5s cubic-bezier(1, .75, 1, 1) .5s alternate both infinite;
+}
+
+@keyframes card_rect_small {
+    from {
+        stroke-dashoffset: 550;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.rectSmall {
+    stroke-width: 3px;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 0;
+    -webkit-animation: card_rect 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -moz-animation: card_rect 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -o-animation: card_rect 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    animation: card_rect 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+}
+
+@keyframes card_rect {
+    from {
+        stroke-dashoffset: 400;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.visa {
+    visibility: hidden;
+}
+
+.puce {
+    stroke-width: 3px;
+    stroke-dasharray: 350; /* 550 */
+    stroke-dashoffset: 0;
+    -webkit-animation: puce 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -moz-animation: puce 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -o-animation: puce 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    animation: puce 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+}
+
+@keyframes puce {
+    0% {
+        stroke-dashoffset: 350;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.line {
+    stroke-width: 3px;
+    stroke-dasharray: 25;
+    stroke-dashoffset: 0;
+    -webkit-animation: line 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -moz-animation: line 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -o-animation: line 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    animation: line 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+}
+
+@keyframes line {
+    0% {
+        stroke-dashoffset: 25;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.lineBig {
+    stroke-width: 3px;
+    stroke-dasharray: 115;
+    stroke-dashoffset: 0;
+    -webkit-animation: lineBig 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -moz-animation: lineBig 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    -o-animation: lineBig 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+    animation: lineBig 2s cubic-bezier(1, .75, 1, 1) alternate infinite;
+}
+
+@keyframes lineBig {
+    0% {
+        stroke-dashoffset: 115;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
