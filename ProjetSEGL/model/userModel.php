@@ -1,8 +1,8 @@
 <?php
 include 'db.php';
-function getConnexion($username,$password){
+function getConnexion($email,$password){
     $db=getConnexionBD();
-    $sql="select * from users where username='$username' and password='$password'";
+    $sql="select * from users where email='$email' and password='$password'";
     $req=$db->query($sql);
     return $req->fetch();
 }

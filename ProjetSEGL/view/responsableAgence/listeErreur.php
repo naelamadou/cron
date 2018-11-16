@@ -80,9 +80,11 @@
                                                 where com.id_users=u.id 
                                                 and com.id_agence=ag.id 
                                                 and com.id_erreur=le.id
-                                                and le.status='1'
+                                                and le.status='1' and 
+                                                ag.id_resp='" . $_SESSION['id'] . "'
                                                 and le.MON>50000
                                                 ";
+                                                //var_dump($_SESSION['id']);
                                                 $req=$db->query($sql);
                                                 while ($res=$req->fetch()) {
                                                     $id = $res['id'];

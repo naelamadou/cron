@@ -39,7 +39,7 @@
                             <i class="fa fa-user fa-3x"></i>
                         </span>
                         <div class="form-line">
-                            <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
+                            <input type="text" class="form-control" name="email" placeholder="Email" required >
                         </div>
                     </div>
                     <div class="input-group">

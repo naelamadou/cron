@@ -36,40 +36,47 @@ session_destroy();
 </head>
 
 <body class="login-page">
+    
     <div class="login-box">
         <div class="logo">
             <a href="javascript:void(0);"><b>SOGESEGL</b></a>
             <small>SGBS</small>
         </div>
         <div class="card">
-            <div class="body">
-                <form id="sign_in" method="POST" action="controller/userController.php">
-                    <div class="msg">Authentification</div>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-user fa-3x"></i>
-                        </span>
-                        <div class="form-line">
-                            <input type="text" class="form-control" name="username" placeholder="Username" required autofocus>
-                        </div>
+                    <div class="body">
+                        <form id="sign_in" method="POST" action="controller/userController.php">
+                            
+                            <div class="msg">Authentification</div>
+                             
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-user fa-3x"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required autofocus>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="fa fa-lock fa-3x"s"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required autofocus>
+                                </div>
+                            </div>
+                            <div class="row">                  
+                                <div class="col-xs-6">
+                                    <input type="submit" class="btn btn-block bg-pink waves-effect"  name="connect" value="se connecter" />
+                                </div>
+                            </div>
+                           
+                        </form>
                     </div>
-                    <div class="input-group">
-                        <span class="input-group-addon">
-                            <i class="fa fa-lock fa-3x"s"></i>
-                        </span>
-                        <div class="form-line">
-                            <input type="password" class="form-control" name="password" placeholder="Password" required>
-                        </div>
-                    </div>
-                    <div class="row">                  
-                        <div class="col-xs-6">
-                            <input type="submit" class="btn btn-block bg-pink waves-effect"  name="connect" value="se connecter" />
-                        </div>
-                    </div>
-                   
-                </form>
-            </div>
-        </div>
+                </div> 
+
+               
+    </div>
+       
     </div>
 
     <!-- Jquery Core Js -->

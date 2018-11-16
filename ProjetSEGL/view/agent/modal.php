@@ -129,7 +129,7 @@
                                 <div class="col-md-6">
                                     <label class="card-inside-title">Veillez Choisir l'agence *:
                                         <?= $res['AGE'] ?></label>
-                                    <select name="id_agence" class="form-control">
+                                    <select name="id_agence" class="form-control" required="Veillez choisir une agence">
                                         <option></option>
                                         <?php foreach ($listeAgence as $agence ): ?>
                                         <option value=<?=$agence['id'] ?> >
@@ -147,7 +147,7 @@
                             <input type="hidden" name="id_erreur" value="<?= $res['id'] ?>">
                             <label class="card-inside-title">Effectuer Commentaire* </label>
                             <div class="form-line">
-                                <textarea id="descr" required="required" class="form-control no-resize auto-growth" name="desc_com" rows="5" cols="40" placeholder="effectuer un commentaire"></textarea>
+                                <textarea id="descr" required="required" class="form-control no-resize auto-growth" name="desc_com" rows="5" cols="40" placeholder="effectuer un commentaire" required></textarea>
                             </div>
 
                             <div class="modal-footer">

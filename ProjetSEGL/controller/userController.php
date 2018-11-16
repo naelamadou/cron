@@ -32,7 +32,9 @@
 			$nbErreurInf50mil=nbErreurInf50mil();
 			$NBErreurBetween50and300=NBErreurBetween50and300();
 			//$editer=updateUC();
+
 			if (isset($_POST['envoyerCommentaire'])) {
+				$_POST['envoyerCommentaire']=strip_tags($_POST['envoyerCommentaire']);
 				extract($_POST);
 				//var_dump($_POST);
 				$desc_com=addslashes($desc_com);
@@ -118,12 +120,17 @@
 				//$exe=AjouterGrille($fichier,$id_responsable);
 				//require_once '../view/responsableAgence/listeErreur.php';	
 			}
+			// magic code de graficart 
+			foreach ($_POST as $key => $value) {
+				$_POST[$key]=stripslashes($value);
+			}
 
-if (isset($_POST['connect'])) {
+if (isset($_POST['connect']) && !empty($_POST['email']) && !empty($_POST['password'])) {
 	
 	 extract($_POST);
-	 //$password=md5($password);
-	$user = getConnexion($username, $password);
+	 $password=md5($password);
+	 $email=addslashes($email);
+	$user = getConnexion($email,$password);
 
 	if ($user) {
 
@@ -150,7 +157,7 @@ if (isset($_POST['connect'])) {
 }
 
 if (isset($_GET['page'])) {
-	 switch ($_GET['page']) {
+	 switch ( $_GET['page']) {
 	 	case '1':
 			require_once '../view/admin/index.php';
 	 	break;
@@ -208,11 +215,10 @@ if (isset($_GET['page'])) {
 	 	break;*/
 	 	
 	 	default:
+	 	require_once '../view/error/error.php';
 	 		break;
 	 }
 				
-	} else {
-		die("die error");
-	}
+	} 
 
 ?>
